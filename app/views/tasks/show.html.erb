@@ -1,0 +1,9 @@
+<h1>Show Task</h1>
+
+<p><%= "Title: #{@task.title} | Details: #{@task.details} | Completion: #{@task.completed}" %></p>
+
+<p><%= link_to "Edit task", edit_task_path(@task) %></p>
+<p><%= link_to "Delete task",
+       task_path(@task),
+       method: :delete,
+       data: { confirm: "bye bye task?" }%></p>
